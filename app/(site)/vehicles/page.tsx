@@ -18,9 +18,9 @@ const page = async ({ searchParams }: { searchParams: UrlSearchParams }) => {
 
   return (
     <div className="flex flex-col flex-1">
-      <div className="flex justify-between mt-8">
+      <div className="flex flex-col-reverse justify-center gap-4 mt-8 md:justify-between md:flex-row">
         <SearchForm />
-        <Link href={"/vehicles/new"} className="ml-4 btn btn-primary">
+        <Link href={"/vehicles/new"} className=" md:ml-4 btn btn-primary">
           New Vehicle
         </Link>
       </div>

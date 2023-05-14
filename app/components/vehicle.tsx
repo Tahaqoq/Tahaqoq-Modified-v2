@@ -1,6 +1,7 @@
 import { finalResult } from "@/lib/utils/helpers";
 
 import classNames from "classnames";
+import Image from "next/image";
 import Link from "next/link";
 
 const Vehicle = ({ vehicle }: any) => {
@@ -35,27 +36,29 @@ const Vehicle = ({ vehicle }: any) => {
           {vehicle?.result ? "View Result" : "Add Result"}
         </Link>
       </td>
-      <td>
-        <div className="flex gap-1 ">
-          <Link
-            target={"_blank"}
-            href={`/${vehicle.id}/report`}
-            className={classNames("btn", result === "N/A" && "btn-disabled")}
-          >
-            Report
-          </Link>
-        </div>
+      <td title="Show PDF Report">
+        <Link
+          target={"_blank"}
+          href={`/${vehicle.id}/report`}
+          className={classNames(
+            "btn btn-outline ",
+            result === "N/A" && "btn-disabled"
+          )}
+        >
+          <Image src={"/images/pdf.svg"} width={30} height={30} alt="pdf" />
+        </Link>
       </td>
-      <td className="">
-        <div className="flex gap-1">
-          <Link
-            target={"_blank"}
-            href={`/${vehicle.id}/letter`}
-            className={classNames("btn ", result === "N/A" && "btn-disabled")}
-          >
-            Letter
-          </Link>
-        </div>
+      <td title="Show PDF Letter">
+        <Link
+          target={"_blank"}
+          href={`/${vehicle.id}/letter`}
+          className={classNames(
+            "btn btn-outline",
+            result === "N/A" && "btn-disabled"
+          )}
+        >
+          <Image src={"/images/pdf.svg"} width={30} height={30} alt="pdf" />
+        </Link>
       </td>
     </tr>
   );

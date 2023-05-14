@@ -1,10 +1,9 @@
 "use client";
 import classNames from "classnames";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
-const SearchForm = () => {
+const SearchForm = ({ searchParams }: any) => {
+  console.log(searchParams);
   const searchRef = useRef<HTMLInputElement>(null);
   const search = () => {
     if (searchRef.current?.value) {
@@ -21,19 +20,25 @@ const SearchForm = () => {
   };
   return (
     <form>
-      <div className="flex gap-2">
+      <div className="flex flex-col gap-4 md:flex-row">
         <input
           ref={searchRef}
           type="search"
           placeholder="Search...."
-          className="w-full max-w-xs input input-bordered"
+          className="w-full md:max-w-xs input input-bordered"
         />
-        <button onClick={search} className={classNames("btn")} type="button">
-          Search
-        </button>
-        <button onClick={clear} className="btn btn-outline">
-          clear search
-        </button>
+        <div className="flex gap-2">
+          <button
+            onClick={search}
+            className={classNames("btn flex-1 ")}
+            type="button"
+          >
+            Search
+          </button>
+          <button onClick={clear} className="btn btn-outline">
+            clear
+          </button>
+        </div>
       </div>
     </form>
   );

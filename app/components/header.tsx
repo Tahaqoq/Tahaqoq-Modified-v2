@@ -54,19 +54,6 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <div className="items-center justify-center hidden gap-4 mx-4 md:flex">
-          <div className="avatar">
-            <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-              <Image
-                src="/images/avatar.png"
-                alt="avatar"
-                width={25}
-                height={25}
-              />
-            </div>
-          </div>
-          <span>{session?.user?.name}</span>
-        </div>
         <label className="mr-4 swap swap-rotate" title="Toggle DarkMode">
           <input type="checkbox" onChange={toggleTheme} />
 
@@ -92,12 +79,63 @@ const Header = () => {
             <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
           </svg>
         </label>
-        <Link href="/api/auth/signout" className="btn">
-          Sign out
-        </Link>
-        {/* <button onClick={() => signOut()} className="btn">
-          sign out
-        </button> */}
+        <div className="dropdown dropdown-end">
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <div className="w-10 rounded-full ring ring-primary ">
+              <Image
+                src="/images/avatar.png"
+                alt="avatar"
+                width={25}
+                height={25}
+              />
+            </div>
+          </label>
+          <ul
+            tabIndex={0}
+            className="p-4 mt-3 shadow menu menu-compact dropdown-content bg-base-200 rounded-box w-52"
+          >
+            <li className="">
+              <Link href="#">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                    />
+                  </svg>
+                </span>
+                {session?.user?.name}
+              </Link>
+            </li>
+            <li>
+              <Link href="/api/auth/signout">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
+                  />
+                </svg>
+                Logout
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
