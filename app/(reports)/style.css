@@ -1,0 +1,32 @@
+/* @page {
+  size: A4;
+}
+
+.title {
+  @apply text-xl font-bold;
+}
+.subtitle {
+  @apply text-sm font-semibold;
+}
+
+th {
+  @apply subtitle;
+}
+th,
+td {
+  @apply p-1 text-start;
+}
+td,
+th,
+tr {
+  @apply border;
+}
+tr {
+  @apply leading-4;
+}
+
+@media print {
+  #print-btn {
+    display: none;
+  }
+} */
