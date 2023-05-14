@@ -17,14 +17,14 @@ const page = async ({ searchParams }: { searchParams: UrlSearchParams }) => {
   const { vehicles, totalPages } = await getVehicles(page, pageSize, search);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col flex-1">
       <div className="flex justify-between mt-8">
         <SearchForm />
         <Link href={"/vehicles/new"} className="ml-4 btn btn-primary">
           New Vehicle
         </Link>
       </div>
-      <div className="overflow-x-auto ">
+      <div className="overflow-x-auto grow ">
         <table className="table w-full mt-8 table-normal">
           <thead>
             <tr>
