@@ -36,10 +36,9 @@ export default function SignInPage() {
 
     setIsFetching(false);
     startTransition(() => {
-      router.push(callbackUrl || "/");
+      // router.push(callbackUrl || "/");
     });
-    reset();
-    console.log(error);
+    // reset();
   };
   return (
     <section className="min-h-screen bg-gray-50 dark:bg-gray-900">
