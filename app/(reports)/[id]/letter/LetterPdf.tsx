@@ -349,22 +349,24 @@ const ResultSection = ({ vehicle }: any) => {
           {vehicle.finalResult === "PASS" ? "مطابقة" : "غير مطابقة"} {`   `}
         </Text>
       </View>
-      <View
-        style={{
-          textAlign: "right",
-          display: "flex",
-          flexDirection: "row-reverse",
-          lineHeight: 2,
-        }}
-      >
-        <Text>
-          لمتطلبات اللوائح الفنية الخليجية ولا مانع من تحويل الطراز من{" "}
-        </Text>
-        <Text wrap>{vehicle.oldModel}</Text>
-        <Text wrap> الي</Text>
-        <Text wrap>{vehicle.newModel}</Text>
-        <Text wrap>.</Text>
-      </View>
+      {vehicle.finalResult === "PASS" && (
+        <View
+          style={{
+            textAlign: "right",
+            display: "flex",
+            flexDirection: "row-reverse",
+            lineHeight: 2,
+          }}
+        >
+          <Text>
+            لمتطلبات اللوائح الفنية الخليجية ولا مانع من تحويل الطراز من{" "}
+          </Text>
+          <Text wrap>{vehicle.oldModel}</Text>
+          <Text wrap> الي</Text>
+          <Text wrap>{vehicle.newModel}</Text>
+          <Text wrap>.</Text>
+        </View>
+      )}
     </View>
   );
 };
