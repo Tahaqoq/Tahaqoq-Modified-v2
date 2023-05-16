@@ -7,7 +7,6 @@ import { ChangeEvent, FormEvent, useState, useTransition } from "react";
 import { colors } from "../../colors.js";
 const UpdateResultForm = ({ vehicleResult }: any) => {
   const result = JSON.parse(vehicleResult);
-  console.log(result);
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [isFetching, setIsFetching] = useState(false);
