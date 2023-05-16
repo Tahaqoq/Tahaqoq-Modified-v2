@@ -166,7 +166,7 @@ const Report = ({ data }: any) => {
           <VehicleResultSection vehicle={vehicle} />
           <FinalResult finalResult={vehicle.finalResult} />
           <NoteSection vehicle={vehicle} />
-          <ManagerSection vehicle={vehicle} />
+          <ManagerSection />
           <FooterSection />
         </Page>
       </Document>
@@ -961,11 +961,11 @@ const NoteSection = ({ vehicle }: any) => {
     </View>
   );
 };
-const ManagerSection = ({ vehicle }: any) => {
+const ManagerSection = () => {
   return (
     <View>
       <Text style={styles.signture}>
-        <Text>عبدالحكيم البريه</Text>
+        <Text>{siteConfig.manager}</Text>
         <Text style={[styles.subtitle]}>المدير الفني: {"  "}</Text>
       </Text>
       <Text style={[styles.signture, { marginTop: 4 }]}>

@@ -75,6 +75,7 @@ export type SiteConfig = {
   branch: string;
   ar_branch: string;
   description: string;
+  manager: string;
   address: string;
   ar_address: string;
   phone: string;

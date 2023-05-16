@@ -9,6 +9,7 @@ export const siteConfig: SiteConfig = {
   phone: "0577929189",
   email: "info@tahaqoq.com",
   description: "VEHICLE INSPECTION CENTER",
+  manager: "عبدالحكيم البريه",
   url: "https://tahaqoq.com/",
   ogImage: "",
   links: {
@@ -25,6 +26,7 @@ export const siteConfig: SiteConfig = {
 //   phone: "0502956801",
 //   email: "info@tahaqoq.com",
 //   description: "VEHICLE INSPECTION CENTER",
+//   manager:"عبدالعزيز بانواس",
 //   url: "https://tahaqoq.com/",
 //   ogImage: "",
 //   links: {
