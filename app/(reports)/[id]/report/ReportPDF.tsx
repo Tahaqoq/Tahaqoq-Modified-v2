@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
 
 const Report = ({ data }: any) => {
   const vehicle = JSON.parse(data);
-  console.log(vehicle);
+
   return (
     <PDFViewer style={styles.viewer}>
       <Document

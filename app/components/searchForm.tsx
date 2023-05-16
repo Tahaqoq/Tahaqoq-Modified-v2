@@ -3,7 +3,6 @@ import classNames from "classnames";
 import { useRef } from "react";
 
 const SearchForm = ({ searchParams }: any) => {
-  console.log(searchParams);
   const searchRef = useRef<HTMLInputElement>(null);
   const search = () => {
     if (searchRef.current?.value) {
