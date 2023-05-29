@@ -180,6 +180,7 @@ const HeaderSection = ({ vehicle }: any) => {
   return (
     <View>
       <View style={styles.header}>
+        {/* eslint-disable-next-line jsx-a11y/alt-text */}
         <Image src="/images/tahaqoq.jpeg" style={styles.logo} />
         <View style={[styles.headerMiddle]}>
           <Text style={[styles.headText]}>تقرير تفتيش مركبة معدلة</Text>
@@ -565,7 +566,9 @@ const VehicleResultSection = ({ vehicle }: any) => {
             >
               {vehicle.result.engine.modification ? "نعم" : "لا"}
             </Text>
-            <Text style={[styles.tableCol, { width: "15%" }]}>
+            <Text
+              style={[styles.tableCol, { width: "15%", borderTop: "none" }]}
+            >
               {vehicle.result.engine.pass ? "مطابق" : "غيرمطابق"}
             </Text>
           </View>
@@ -602,7 +605,9 @@ const VehicleResultSection = ({ vehicle }: any) => {
             >
               {vehicle.result.transmision.modification ? "نعم" : "لا"}
             </Text>
-            <Text style={[styles.tableCol, { width: "15%" }]}>
+            <Text
+              style={[styles.tableCol, { width: "15%", borderTop: "none" }]}
+            >
               {" "}
               {vehicle.result.transmision.pass ? "مطابق" : "غيرمطابق"}
             </Text>
@@ -640,7 +645,9 @@ const VehicleResultSection = ({ vehicle }: any) => {
             >
               {vehicle.result.exhaust.modification ? "نعم" : "لا"}
             </Text>
-            <Text style={[styles.tableCol, { width: "15%" }]}>
+            <Text
+              style={[styles.tableCol, { width: "15%", borderTop: "none" }]}
+            >
               {" "}
               {vehicle.result.exhaust.pass ? "مطابق" : "غيرمطابق"}
             </Text>
@@ -678,7 +685,9 @@ const VehicleResultSection = ({ vehicle }: any) => {
             >
               {vehicle.result.fuel.modification ? "نعم" : "لا"}
             </Text>
-            <Text style={[styles.tableCol, { width: "15%" }]}>
+            <Text
+              style={[styles.tableCol, { width: "15%", borderTop: "none" }]}
+            >
               {" "}
               {vehicle.result.fuel.pass ? "مطابق" : "غيرمطابق"}
             </Text>
@@ -716,7 +725,9 @@ const VehicleResultSection = ({ vehicle }: any) => {
             >
               {vehicle.result.brake.modification ? "نعم" : "لا"}
             </Text>
-            <Text style={[styles.tableCol, { width: "15%" }]}>
+            <Text
+              style={[styles.tableCol, { width: "15%", borderTop: "none" }]}
+            >
               {" "}
               {vehicle.result.brake.pass ? "مطابق" : "غيرمطابق"}
             </Text>
@@ -754,7 +765,9 @@ const VehicleResultSection = ({ vehicle }: any) => {
             >
               {vehicle.result.edges.modification ? "نعم" : "لا"}
             </Text>
-            <Text style={[styles.tableCol, { width: "15%" }]}>
+            <Text
+              style={[styles.tableCol, { width: "15%", borderTop: "none" }]}
+            >
               {" "}
               {vehicle.result.edges.pass ? "مطابق" : "غيرمطابق"}
             </Text>
@@ -792,7 +805,9 @@ const VehicleResultSection = ({ vehicle }: any) => {
             >
               {vehicle.result.steering.modification ? "نعم" : "لا"}
             </Text>
-            <Text style={[styles.tableCol, { width: "15%" }]}>
+            <Text
+              style={[styles.tableCol, { width: "15%", borderTop: "none" }]}
+            >
               {" "}
               {vehicle.result.steering.pass ? "مطابق" : "غيرمطابق"}
             </Text>
@@ -830,7 +845,9 @@ const VehicleResultSection = ({ vehicle }: any) => {
             >
               {vehicle.result.wheels.modification ? "نعم" : "لا"}
             </Text>
-            <Text style={[styles.tableCol, { width: "15%" }]}>
+            <Text
+              style={[styles.tableCol, { width: "15%", borderTop: "none" }]}
+            >
               {" "}
               {vehicle.result.wheels.pass ? "مطابق" : "غيرمطابق"}
             </Text>
@@ -868,7 +885,9 @@ const VehicleResultSection = ({ vehicle }: any) => {
             >
               {vehicle.result.entertainment.modification ? "نعم" : "لا"}
             </Text>
-            <Text style={[styles.tableCol, { width: "15%" }]}>
+            <Text
+              style={[styles.tableCol, { width: "15%", borderTop: "none" }]}
+            >
               {" "}
               {vehicle.result.entertainment.pass ? "مطابق" : "غيرمطابق"}
             </Text>
@@ -906,7 +925,9 @@ const VehicleResultSection = ({ vehicle }: any) => {
             >
               {vehicle.result.chassis.modification ? "نعم" : "لا"}
             </Text>
-            <Text style={[styles.tableCol, { width: "15%" }]}>
+            <Text
+              style={[styles.tableCol, { width: "15%", borderTop: "none" }]}
+            >
               {" "}
               {vehicle.result.chassis.pass ? "مطابق" : "غيرمطابق"}
             </Text>
