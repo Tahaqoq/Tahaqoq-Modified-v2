@@ -228,7 +228,7 @@ const AddResultForm = ({ vehicleId }: any) => {
                 className="w-full max-w-xs input input-bordered"
               />
             </div>
-            <div className="w-full max-w-xs form-control">
+            <div className="w-full max-w-xs form-control hidden">
               <label className="label">Dimensions</label>
               <input
                 required
