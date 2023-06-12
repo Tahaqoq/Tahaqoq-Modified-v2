@@ -13,8 +13,8 @@ const AddResultForm = ({ vehicleId }: any) => {
 
   const [formData, setFormData] = useState({
     color: "",
-    weight: "n/a",
-    dimensions: "",
+    weight: "",
+    dimensions: "n/a",
     remarks: "",
     hasModificationReport: true,
     brakeModification: false,
