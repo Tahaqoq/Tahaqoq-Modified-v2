@@ -148,7 +148,7 @@ const AddResultForm = ({ vehicleId }: any) => {
     setIsFetching(true);
     await fetch(`/api/vehicles/${vehicleId}/results`, {
       method: "POST",
-      body: JSON.stringify(formData),
+      body: JSON.stringify({...formData,weight:""}),
     });
     setIsFetching(false);
     startTransition(() => {
@@ -221,7 +221,7 @@ const AddResultForm = ({ vehicleId }: any) => {
                 type="text"
                 placeholder=""
                 name="weight"
-                value={formData.weight}
+                value={formData.weight || ""}
                 onChange={(e) =>
                   setFormData((prev) => ({ ...prev, weight: e.target.value }))
                 }
