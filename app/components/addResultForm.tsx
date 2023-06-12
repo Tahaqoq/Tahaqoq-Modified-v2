@@ -228,23 +228,7 @@ const AddResultForm = ({ vehicleId }: any) => {
                 className="w-full max-w-xs input input-bordered"
               />
             </div>
-<!--             <div className="w-full max-w-xs form-control hidden">
-              <label className="label">Dimensions</label>
-              <input
-                required
-                type="text"
-                placeholder=""
-                name="weight"
-                value={formData.dimensions}
-                onChange={(e) =>
-                  setFormData((prev) => ({
-                    ...prev,
-                    dimensions: e.target.value,
-                  }))
-                }
-                className="w-full max-w-xs input input-bordered"
-              />
-            </div> -->
+          
           </div>
 
           <div className="max-w-xl form-control">
