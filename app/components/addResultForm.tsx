@@ -13,7 +13,7 @@ const AddResultForm = ({ vehicleId }: any) => {
 
   const [formData, setFormData] = useState({
     color: "",
-    weight: "",
+    weight: "n/a",
     dimensions: "",
     remarks: "",
     hasModificationReport: true,
@@ -148,7 +148,7 @@ const AddResultForm = ({ vehicleId }: any) => {
     setIsFetching(true);
     await fetch(`/api/vehicles/${vehicleId}/results`, {
       method: "POST",
-      body: JSON.stringify({...formData,weight:""}),
+      body: JSON.stringify(formData),
     });
     setIsFetching(false);
     startTransition(() => {
