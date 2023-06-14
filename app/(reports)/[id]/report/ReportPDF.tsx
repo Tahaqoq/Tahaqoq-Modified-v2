@@ -198,8 +198,6 @@ const HeaderSection = ({ vehicle }: any) => {
               </Text>
               <Text style={styles.subtitle}>التاريخ:</Text>
             </Text>
-           
-            </Text>
           </View>
         </View>
         <View style={[styles.headerRight, styles.subtitle]}>
