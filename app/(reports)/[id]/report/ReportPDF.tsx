@@ -465,7 +465,7 @@ const VehicleResultSection = ({ vehicle }: any) => {
               <Text
                 style={[
                   styles.tableHead,
-                  { width: "34%", borderLeft: "none", borderBottom: "none" },
+                  { width: "50%", borderLeft: "none", borderBottom: "none" },
                 ]}
               >
                 اللون
@@ -473,34 +473,25 @@ const VehicleResultSection = ({ vehicle }: any) => {
               <Text
                 style={[
                   styles.tableHead,
-                  { width: "33%", borderLeft: "none", borderBottom: "none" },
+                  { width: "50%", borderBottom: "none" },
                 ]}
               >
                 الوزن
               </Text>
-              <Text
-                style={[
-                  styles.tableHead,
-                  { width: "33%", borderBottom: "none" },
-                ]}
-              >
-                الابعاد
-              </Text>
+      
             </View>
             <View style={[styles.tableRow]}>
               <Text
-                style={[styles.tableCol, { width: "34%", borderLeft: "none" }]}
+                style={[styles.tableCol, { width: "50%", borderLeft: "none" }]}
               >
                 {vehicle.result.color}
               </Text>
               <Text
-                style={[styles.tableCol, { width: "33%", borderLeft: "none" }]}
+                style={[styles.tableCol, { width: "50%" }]}
               >
                 {vehicle.result.weight}
               </Text>
-              <Text style={[styles.tableCol, { width: "33%" }]}>
-                {vehicle.result.dimensions}
-              </Text>
+          
             </View>
           </View>
         </View>
