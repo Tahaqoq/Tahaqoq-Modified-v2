@@ -198,11 +198,7 @@ const HeaderSection = ({ vehicle }: any) => {
               </Text>
               <Text style={styles.subtitle}>التاريخ:</Text>
             </Text>
-            <Text>
-              <Text>
-                {vehicle.arabicDate} {`  `}
-              </Text>
-              <Text style={styles.subtitle}>الموافق:</Text>
+           
             </Text>
           </View>
         </View>
